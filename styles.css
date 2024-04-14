@@ -1,0 +1,109 @@
+/* Estilos para o corpo da página */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121212; /* Cor de fundo mais escura */
+  color: #7e6868; /* Cor do texto branco */
+  font-size: 16px; /* Tamanho base do texto */
+}
+
+/* Estilos para o contêiner principal */
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  text-align: center;
+  background-color: #1a1a1a; /* Cor de fundo do container */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para o título */
+h1 {
+  color: #71c7ac; /* Verde claro para o título */
+  font-size: 2em; /* Exemplo de tamanho do título em 'em' */
+}
+
+/* Estilos para a lista de links */
+.links {
+  list-style-type: none;
+  padding: 0;
+}
+
+.links li {
+  margin-bottom: 20px;
+}
+
+.links li a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1em; /* Exemplo de preenchimento em 'em' */
+  height: 3em; /* Exemplo de altura em 'em' */
+  background-color: #1f1f1f; /* Cor de fundo dos links */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.links li a:hover {
+  background-color: #2c2c2c; /* Cor de fundo dos links ao passar o mouse */
+}
+
+.links li img {
+  width: 2.5em; /* Exemplo de largura da imagem em 'em' */
+  height: 2.5em; /* Exemplo de altura da imagem em 'em' */
+  border-radius: 50%;
+  margin-right: 1em; /* Exemplo de margem em 'em' */
+}
+
+/* Estilos para a barra de navegação hamburguer */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.navbar-links {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+
+.navbar-links li {
+  margin-right: 20px;
+}
+
+/* Estilos para a barra de navegação hamburguer em telas menores */
+@media screen and (max-width: 768px) {
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px 0;
+    z-index: 1000;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .navbar-links li {
+    margin: 10px 0;
+  }
+}
